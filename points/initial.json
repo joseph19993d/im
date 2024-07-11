@@ -1,10 +1,7 @@
 [
 
-    {"x":2082, "y":1108 , "color": "" , "text": "Zapatos blancos" , "id": "shoes2 ", "xd": 300, "yd" :400, "pointContainer": "shoes2Point", "url":"https://colombia.com.co/producto/zapatos-tenis-calzado-casual-blancos-con-un-toque-negro/"},
-    {"x":500, "y":600 , "color": "" , "text": "Blusa Naranja x1" , "id": "shirt3 ", "xd": 300, "yd" :400, "pointContainer": "shirt3Point", "url":"https://www.oxap.com.co/product/blusa-dama-lirio-naranja/"},
-    {"x":1500, "y":400 , "color": "" , "text": "Blusa Naranja x2" , "id": "shirt4 ", "xd": 300, "yd" :400, "pointContainer": "shirt3Point", "url":"https://www.oxap.com.co/product/blusa-dama-lirio-naranja/"},
-    {"x":900, "y":200 , "color": "" , "text": "Blusa Naranja x3" , "id": "shirt5 ", "xd": 300, "yd" :400, "pointContainer": "shirt3Point", "url":"https://www.oxap.com.co/product/blusa-dama-lirio-naranja/"},
-    {"x":460, "y":300 , "color": "" , "text": "Blusa Naranja x4" , "id": "shirt6 ", "xd": 300, "yd" :400, "pointContainer": "shirt3Point", "url":"https://www.oxap.com.co/product/blusa-dama-lirio-naranja/"},
-    {"x":100, "y":500 , "color": "" , "text": "Blusa Naranja x5" , "id": "shirt7 ", "xd": 300, "yd" :400, "pointContainer": "shirt3Point", "url":"https://www.oxap.com.co/product/blusa-dama-lirio-naranja/"}
-
+    {"x":2082, "y":1108 , "color": "" , "text": "Jordans" , "id": "shoes2 ", "xd": 300, "yd" :400, "pointContainer": "shoes2Point", "url":"https://legendgang.com/collections/jordan"},
+    {"x":500, "y":600 , "color": "" , "text": "T-shirts" , "id": "shirt3 ", "xd": 300, "yd" :400, "pointContainer": "shirt3Point", "url":"https://legendgang.com/collections/tshirts"},
+    {"x":1200, "y":950 , "color": "" , "text": "Jeans" , "id": "shirt4 ", "xd": 300, "yd" :400, "pointContainer": "shirt3Point", "url":"https://legendgang.com/collections/jeans-1"}
+    
 ]

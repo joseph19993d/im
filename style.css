@@ -402,7 +402,15 @@ body::-webkit-scrollbar {
   border: 3px solid #ff000000; 
   color: #ffffff;
   z-index: 10300;
-  /* display: none; */
+  display: none;
 
 }
 
+@media ( min-width: 700px ){
+  .buttonMenu{
+    display:none ;
+  }
+  .menu{
+    display: none;
+  }
+}

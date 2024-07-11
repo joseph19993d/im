@@ -133,9 +133,9 @@ function chuleDirection(container, x, y) {
 }
 
 function clickButtonAction(url) {
-  if (confirm(`¿Estás seguro de ir a ${url}?`)) {
+  if (confirm(`Redirigiendo `)) {
       // Si el usuario presiona "Aceptar"
-      alert(`Redirigiendo a: ${url}`);
+      // alert(`Redirigiendo a: ${url}`);
       window.location.href = url; // Redirige a la URL especificada
   } 
   

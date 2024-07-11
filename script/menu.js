@@ -2,10 +2,11 @@ function showMenu(){
     const menu=document.getElementById("menu");
     const bgContainer=document.getElementById("rs-module");
     const buttonMenu= document.getElementById("buttonMenu");
+    
     if(menu.style.display== "none"){
         bgContainer.style.filter = "blur(10px)";
         menu.style.display="block";
-        buttonMenu.innerText="menu";
+        buttonMenu.innerText="close";
     }else{
         menu.style.display="none";
         bgContainer.style.filter = "none";
