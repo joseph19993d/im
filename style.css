@@ -1,0 +1,355 @@
+/* CSS */
+
+
+body{
+  background-color: aqua;
+  /* padding: 0; */
+  margin: 0;
+}
+
+.rs-module {
+  overflow: auto;
+  border: 0px solid #cccccc00;
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+  scrollbar-color: none;
+  background-color: rgb(119, 9, 9);
+  /* min-width: screen ;
+  min-height: 480px; */
+
+}
+
+.rs-module::-webkit-scrollbar {
+  display: none;
+}
+
+#slider-1 {
+  border: 0px solid #d30808;
+  padding: 0px;
+  margin: -0px;
+  position: absolute;
+  display: block;
+  scrollbar-color: none;
+  z-index: 101;
+  /* width: 1000px; */
+  /* min-width: 1300px; */
+  /* max-height: 1366px; */
+  overflow: auto;
+  
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  background-color: #f0f0f0;
+}
+
+.dot-center {
+  display: block;
+  background-color: rgb(255, 255, 255);
+  width: 10px;
+  height: 10px;
+  z-index: 12;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  margin: auto;
+}
+
+/* DOT Animation */
+
+.dot {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 0, 0, 0);
+  /* position: relative; */
+  box-shadow: 0 0 0 1px rgb(255, 255, 255);
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 50%;
+  /* position: absolute; */
+  z-index: 10;
+}
+
+.dot:not(:hover) {
+  animation: grow 1.5s infinite;
+}
+
+/* .dot::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  margin: -50px 0 0 -90px;
+} */
+
+/* For add other dots change dot-{secon name indicate}-{third name indicate} */
+/* For add other Dialogs change dialog-{secon name indicate}-{third name indicate} */
+.dot:hover {
+  opacity: 0%;
+}
+
+.dot-men-shoes:hover + .dialog .box,
+.dot-men-shoes:hover + .dialog .chule-direction {
+  display: block;
+}
+
+/*Example for  dot-men-t-shirt & dialog-t-shirt */
+/*only the  class names */
+.dot-men-t-shirt:hover + .dialog-t-shirt .box,
+.dot-men-t-shirt:hover + .dialog-t-shirt .chule-direction {
+  display: block;
+}
+.dot:hover + .box {
+  display: block;
+}
+/*End example (Example for  dot-men-t-shirt & dialog-t-shirt ) */
+
+/*POSITIONS-----------------------------------*/
+/* DOTS POSITIONS & DIALOG BOX POSITIONS */
+
+/* For add other Dialogs add the semae with the position   margin-top: 'your position h' ; margin-left:  'your position w'; and the class name */
+/* For add other Dots add the semae with the position   margin-top: 'your position h' ; margin-left:  'your position w'; and the class name */
+
+.dot-men-shoes {
+  margin-top: 29%;
+  margin-left: 46%;
+  position: absolute;
+  z-index: 1002;
+}
+
+/*Example for.dot-men-t-shirt (second dot)*/
+
+.dot-men-t-shirt {
+  margin-top: calc(41% + 0px);
+  margin-left: 6%;
+  position: absolute;
+  z-index: 1002;
+}
+/* End example (Example for.dot-men-t-shirt)*/
+
+.dialog {
+  margin-top: 32%;
+  margin-left: 41%;
+  animation: SmalltoNormalDialog 6.5s;
+  position: absolute;
+  z-index: 1000;
+
+}
+
+/*Example for dialog-t-shirt (second dialog)*/
+.dialog-t-shirt {
+  margin-top: 43%; /* change this for vertical position, usually is the dot position more 25px*/
+  margin-left: 1.9%; /* change this for horizontal position, usually is the dot positon less 85 */
+  
+  position: absolute;
+  z-index: 1000;
+  
+}
+
+/*End example (Example for dialog-t-shirt)*/
+
+.box {
+  animation: SmalltoNormalDialog 1.0s;
+  height: auto;
+  background-color: rgb(255, 255, 255);
+  z-index: 1000;
+  position: relative;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-radius: 50px;
+  /* min-width: 100px; */
+  text-align: center;
+  font-size: x-large;
+  font-family: “Brush Script MT”;
+  /* Un commit on finish  (display: none;) is necesary*/
+  /* display: none; */
+  padding-left: 12px;
+  padding-right: 8px;
+  padding-top: 5px;
+  white-space: nowrap;
+  filter: drop-shadow(0 10px 8px rgb(5, 0, 0))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  height: 35px;
+  display: none;
+  z-index: 20;
+  
+}
+
+.chule-direction {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  width: 17px;
+  height: 17px;
+  border-radius: 0%;
+  /* transform: rotate(46deg); */
+  position: relative;
+  top: -48.5px;
+  left: 0px;
+  z-index: 30;
+  margin: auto;
+  /* Un commit  (display: none;) is necesary*/
+  /* display: none; */
+  clip-path: polygon(50% 50%, 100% 100%, 0% 100%); /* Recorta el elemento en forma de triángulo */
+  background-image: 
+  linear-gradient(
+  to bottom,
+  #010101,
+  #ffffff
+);
+}
+
+/* animations */
+
+@keyframes grow {
+  0%{ transform: scale(0.5);  }
+  100% {
+    transform: scale(1);
+    opacity: 15%;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 100%;
+  }
+}
+
+@keyframes SmalltoNormalDialog {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+/* you have to add all the dot and dialog */
+/* @media (width<1300px) {
+  .dot-men-shoes {
+    margin-top: 371px;
+    margin-left: 590px;
+  }
+
+  .dialog {
+    margin-top: 408px;
+    margin-left: 506px;
+  }
+
+  .dot-men-t-shirt {
+    margin-top: 531px;
+    margin-left: 69px;
+  }
+
+  .dialog-t-shirt {
+    margin-top: 566px;
+    margin-left: -13px;
+  }
+}
+
+@media (width>2000px) {
+  .dialog {
+   
+    margin-top: 32%;
+    margin-left: 43%;
+  }
+}
+
+@media (width>2900px) {
+  #slider {
+    width: 3000px;
+  }
+} */
+
+/* 
+@media (width>1600px) {
+
+
+  .dot-men-shoes {
+    margin-top: 371px;
+    margin-left: 590px;
+  }
+
+  .dialog {
+    margin-top: 408px;
+    margin-left: 506px;
+  }
+
+  .dot-men-t-shirt{
+    margin-top:  531px;
+    margin-left: 69px;
+  }
+
+} 
+*/
+.points-container{
+  position: absolute;
+  top: 0px;
+  z-index: 1002
+}
+
+.point {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  z-index: 1004;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 50%;
+  /* margin-top: calc(50% + 0px);
+  margin-left: 50%; */
+  z-index: 1004;
+}
+
+
+/* pantalla es de al menos 1300 píxeles */
+@media (min-height: 700px) {
+  
+  .rs-module{
+    height: 100%;
+    min-width: 100%;
+  }
+  #slider-1{
+    height: 110%;
+    min-width: 100%;
+  }
+  
+}
+
+/* pantalla de menos de 1300 píxeles */
+
+@media (max-height: 1300px) {
+  
+  .rs-module{
+    height: 100vh;
+    min-width: 100vw;
+  }
+  #slider-1{
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+  
+}
+
+
+/* @media (min-width: 1400px) {
+  
+  .rs-module{
+    
+    width: 100vw;
+  }
+  #slider-1{
+    width: 100vw ;
+    min-height: 480px;
+  }
+  
+} */
