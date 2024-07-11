@@ -96,6 +96,8 @@ body::-webkit-scrollbar {
 /* For add other Dialogs change dialog-{secon name indicate}-{third name indicate} */
 .dot:hover {
   opacity: 0%;
+  animation: none;
+  scale: 1.5;
 }
 
 .dot-men-shoes:hover + .dialog .box,
@@ -109,6 +111,8 @@ body::-webkit-scrollbar {
 .dot-men-t-shirt:hover + .dialog-t-shirt .chule-direction {
   display: block;
 }
+
+
 .dot:hover + .box {
   display: block;
 }
@@ -308,7 +312,7 @@ body::-webkit-scrollbar {
 
 
 /* pantalla es de al menos 1300 píxeles */
-@media (min-height: 700px) {
+@media (min-height: 130px) {
   
   .rs-module{
     height: 100%;
