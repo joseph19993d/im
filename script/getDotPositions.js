@@ -1,11 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-    setPoinsts();
-    window.addEventListener('rezise',setPoinsts)
+    setPoints();
 });
 
+function handleResize() {
+  location.reload()
+}
 
-function setPoinsts(){
+
+window.addEventListener('resize', handleResize);
+
+
+function setPoints(){
+
+  console.log("cargando puntos")
         
   const image = document.getElementById("slider-1");
   //   const image = document.getElementById("slider-1");
@@ -52,7 +59,7 @@ function setPoinsts(){
           pointElement.style.background = point.color;
         }
 
-        pointElement.addEventListener("click",()=>sayhi(point.url))
+        pointElement.addEventListener("click",()=>clickButtonAction(point.url))
 
         pointContainer.appendChild(pointElement);
 
@@ -78,7 +85,7 @@ function createPointElementCenter(id, thisDialog, url) {
     const centerPointElement = document.createElement("div");
     centerPointElement.className = "dot-center";
     centerPointElement.id = id + "-dot-center";
-    // centerPointElement.addEventListener("click", () => sayhi(url));
+    // centerPointElement.addEventListener("click", () => clickButtonAction(url));
     lastPointElement.appendChild(centerPointElement);
   }
 }
@@ -122,18 +129,16 @@ function chuleDirection(container, x, y) {
   dialogBoxChuleElement.className = "chule-direction";
   dialogBoxChuleElement.innerHTML = "";
   dialogBoxChuleElement.style.Left = "-30px";
-  // dialogBoxChuleElement.style.marginTop = y+"px";
-  // dialogBoxChuleElement.style.zIndex= 10020;
   container.appendChild(dialogBoxChuleElement);
 }
 
-function sayhi(url) {
-  alert(`funcioanndo!${url}`);
-  console.log();
-  //   fetch("./points/initial.json")
-  //     .then((response) => response.json())
-  //     .then((points) => {
-  //       console.log(points);
-  //     });
+function clickButtonAction(url) {
+  if (confirm(`¿Estás seguro de ir a ${url}?`)) {
+      // Si el usuario presiona "Aceptar"
+      alert(`Redirigiendo a: ${url}`);
+      window.location.href = url; // Redirige a la URL especificada
+  } 
+  
 }
+
 

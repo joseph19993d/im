@@ -2,9 +2,10 @@
 
 
 body{
-  background-color: aqua;
+  background-color: rgba(249, 249, 249, 0);
   /* padding: 0; */
   margin: 0;
+  overflow: hidden;
 }
 
 .rs-module {
@@ -14,10 +15,9 @@ body{
   margin: 0px;
   position: absolute;
   scrollbar-color: none;
-  background-color: rgb(119, 9, 9);
+  background-color: rgba(255, 255, 255, 0);
   /* min-width: screen ;
   min-height: 480px; */
-
 }
 
 .rs-module::-webkit-scrollbar {
@@ -25,7 +25,7 @@ body{
 }
 
 #slider-1 {
-  border: 0px solid #d30808;
+  border: 0px solid #ffffff00;
   padding: 0px;
   margin: -0px;
   position: absolute;
@@ -36,7 +36,6 @@ body{
   /* min-width: 1300px; */
   /* max-height: 1366px; */
   overflow: auto;
-  
 }
 
 body::-webkit-scrollbar {
@@ -144,17 +143,14 @@ body::-webkit-scrollbar {
   animation: SmalltoNormalDialog 6.5s;
   position: absolute;
   z-index: 1000;
-
 }
 
 /*Example for dialog-t-shirt (second dialog)*/
 .dialog-t-shirt {
   margin-top: 43%; /* change this for vertical position, usually is the dot position more 25px*/
   margin-left: 1.9%; /* change this for horizontal position, usually is the dot positon less 85 */
-  
   position: absolute;
   z-index: 1000;
-  
 }
 
 /*End example (Example for dialog-t-shirt)*/
@@ -185,7 +181,6 @@ body::-webkit-scrollbar {
   height: 35px;
   display: none;
   z-index: 20;
-  
 }
 
 .chule-direction {
@@ -292,6 +287,7 @@ body::-webkit-scrollbar {
 
 } 
 */
+
 .points-container{
   position: absolute;
   top: 0px;
@@ -339,17 +335,3 @@ body::-webkit-scrollbar {
   }
   
 }
-
-
-/* @media (min-width: 1400px) {
-  
-  .rs-module{
-    
-    width: 100vw;
-  }
-  #slider-1{
-    width: 100vw ;
-    min-height: 480px;
-  }
-  
-} */
