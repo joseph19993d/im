@@ -15,9 +15,11 @@ body{
   margin: 0px;
   position: absolute;
   scrollbar-color: none;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgb(0, 0, 0);
   /* min-width: screen ;
   min-height: 480px; */
+  
+
 }
 
 .rs-module::-webkit-scrollbar {
@@ -44,18 +46,20 @@ body::-webkit-scrollbar {
 }
 
 .dot-center {
-  display: block;
+  /* display: block; */
   background-color: rgb(255, 255, 255);
   width: 10px;
   height: 10px;
   z-index: 12;
-  margin: 0;
+  margin: auto;
+  /* 
   padding: 0;
-  border: 0;
+  border: 0; */
+
   border-radius: 50%;
   position: absolute;
-  top: 40%;
-  left: 40%;
+  top: 37%;
+  left: 37%;
   margin: auto;
 }
 
@@ -300,8 +304,8 @@ body::-webkit-scrollbar {
 
 .point {
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   z-index: 1004;
   background-color: rgba(255, 255, 255, 0);
   border-radius: 50%;
@@ -311,8 +315,8 @@ body::-webkit-scrollbar {
 }
 
 
-/* pantalla es de al menos 1300 píxeles */
-@media (min-height: 130px) {
+/* pantalla es de al menos 1300 píxeles osea , mas de 1300 px */
+@media (min-height: 1300px) {
   
   .rs-module{
     height: 100%;
@@ -324,6 +328,8 @@ body::-webkit-scrollbar {
   }
   
 }
+
+
 
 /* pantalla de menos de 1300 píxeles */
 
@@ -339,3 +345,64 @@ body::-webkit-scrollbar {
   }
   
 }
+
+
+.buttonMenu{
+   
+   font-size: x-large;
+   font-weight:900;
+   position: fixed ;
+   background-color: #ffffff00;
+   text-transform:capitalize;
+   text-align: center;
+   text-decoration: none; 
+   border: 1px solid #ffffff; 
+   color: #ffffff;
+   z-index: 10300;
+   bottom: 15px;
+   left: 15px;
+}
+
+.menuItemButton{
+
+  background-color: #ffffff00;
+  font-size: x-large;
+  font-weight:900;
+  text-transform:capitalize;
+  text-align: start;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  position: relative;
+  /* padding: 0;
+   */
+  border: none;
+
+}
+
+.contenedor-texto {
+  max-width:55vw; 
+  /* Ajusta el ancho del contenedor según sea necesario */
+  /* white-space: nowrap; */
+   /* Evita que el texto se divida en varias líneas */
+  overflow: hidden; 
+  /* Oculta el texto que desborda del contenedor */
+  text-overflow: ellipsis; 
+  /* Añade puntos suspensivos (...) al final del texto desbordado */
+  border: 1px solid #25ab0000; 
+  /* Opcional: para visualizar mejor el contenedor */
+  color: white;
+}
+
+.menu{
+  top:0;
+  left:0;
+  height: 100%;
+  position: fixed ;
+  background-color: #fcfcfc00;
+  border: 3px solid #ff000000; 
+  color: #ffffff;
+  z-index: 10300;
+  /* display: none; */
+
+}
+

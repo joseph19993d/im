@@ -7,7 +7,53 @@
     <title>Img Static</title>
   </head>
   <body>
+    <section class="menu" id="menu">
+
+      <button class="menuItemButton" > 
+        <div class="contenedor-texto">
+          Este es una opcion.
+        </div>
+      </button>
+
+      <button class="menuItemButton" > 
+        <div class="contenedor-texto">
+          Este es otra opcion.
+        </div>
+      </button>
+      
+    </section>
+    <button class=" buttonMenu" id="buttonMenu" onclick="showMenu()"  >
+      menu 
+      <!-- <div class="chule-direction"></div> -->
+    </button> 
+   
+
     <section id="rs-module" class="rs-module">
+
+      <!-- 
+      <div class="dot-men-shoes">
+        <div class="dot">
+          <div class="dot-center"></div>
+        </div>
+      </div>
+
+      <div class="dialog">
+        <div class="box">Dialog for dot 1</div>
+        <div class="chule-direction"></div>
+      </div>
+
+      <div class="dot-men-t-shirt">
+        <div class="dot">
+          <div class="dot-center"></div>
+        </div>
+      </div>
+
+      <div class="dialog-t-shirt">
+        <div class="box">Dialog for dot 2</div>
+        <div class="chule-direction"></div>
+      </div> 
+      -->
+
 
       <img
         id="slider-1"
@@ -16,11 +62,14 @@
         alt="Tienda de ropa"
       ></img>
 
+    <!-- <div id="points-container" class="points-container"></div> -->
+
     </section>
 
     <script src="./script/getDotPositions.js">  </script>
     <script src="./script/center.js">  </script>
     <script src="./script/positionClickListener.js"></script>
+    <script src="./script/menu.js"> </script> 
 
   </body>
 </html>
