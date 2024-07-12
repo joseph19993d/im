@@ -15,7 +15,7 @@ function showMenu() {
       bgContainer.style.animationFillMode = "forwards";
       menu.style.display = "block";
       buttonMenu.innerText = "close";
-    }, 300);
+    }, 200);
   } else {
     menuButtonAnimationsOut();
 
