@@ -259,23 +259,6 @@ body::-webkit-scrollbar {
   }
 }
 
-/**
- * ----------------------------------------
- * animation tracking-in-expand
- * ----------------------------------------
- */
- @keyframes tracking-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
 
 /**
@@ -293,6 +276,25 @@ body::-webkit-scrollbar {
     opacity: 1;
   }
 }
+
+
+/**
+ * ----------------------------------------
+ * animation slide-out-left
+ * ----------------------------------------
+ */
+ @keyframes slide-out-left {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+}
+
+
 
 
 /* you have to add all the dot and dialog */
@@ -434,7 +436,7 @@ body::-webkit-scrollbar {
   /* padding: 0;
    */
   border: none;
-  animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  /* animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; */
 
 }
 
