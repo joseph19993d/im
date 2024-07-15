@@ -35,25 +35,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 })
-
-// // Agregar un event listener para el evento 'orientationchange'
-// window.addEventListener('orientationchange', handleOrientationChange);
-
-
-// // Función para manejar el cambio de tamaño de la pantalla
-// function handleResize() {
-//     const width = window.innerWidth;
-//     const height = window.innerHeight;
-    
-//     console.log(`Nuevo tamaño de la pantalla: ${width}px de ancho por ${height}px de alto`);
-
-//     centerScroll("rezise")
-    
-//     // Aquí puedes poner cualquier otra lógica que necesites ejecutar al cambiar el tamaño de la pantalla
-// }
-
-// // Agregar un event listener para el evento 'resize'
-// window.addEventListener('resize', handleResize);
-
-// // Opcional: Ejecutar la función una vez para manejar el tamaño inicial de la pantalla
-// handleResize();
