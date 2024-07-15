@@ -37,16 +37,11 @@ body::-webkit-scrollbar {
 }
 
 .dot-center {
-  /* display: block; */
   background-color: rgb(255, 255, 255);
   width: 10px;
   height: 10px;
   z-index: 12;
   margin: auto;
-  /* 
-  padding: 0;
-  border: 0; */
-
   border-radius: 50%;
   position: absolute;
   top: 37%;
@@ -63,13 +58,11 @@ body::-webkit-scrollbar {
   width: 50px;
   height: 50px;
   background-color: rgba(255, 0, 0, 0);
-  /* position: relative; */
   box-shadow: 0 0 0 1px rgb(255, 255, 255);
   width: 30px;
   height: 30px;
   padding: 10px;
   border-radius: 50%;
-  /* position: absolute; */
   z-index: 10;
 }
 
@@ -78,71 +71,16 @@ body::-webkit-scrollbar {
 }
 
 
-/* For add other dots change dot-{secon name indicate}-{third name indicate} */
-/* For add other Dialogs change dialog-{secon name indicate}-{third name indicate} */
 .dot:hover {
   opacity: 0%;
   animation: none;
   scale: 1.5;
 }
 
-.dot-men-shoes:hover + .dialog .box,
-.dot-men-shoes:hover + .dialog .chule-direction {
-  display: block;
-}
-
-/*Example for  dot-men-t-shirt & dialog-t-shirt */
-/*only the  class names */
-.dot-men-t-shirt:hover + .dialog-t-shirt .box,
-.dot-men-t-shirt:hover + .dialog-t-shirt .chule-direction {
-  display: block;
-}
-
 .dot:hover + .box {
   display: block;
 }
-/*End example (Example for  dot-men-t-shirt & dialog-t-shirt ) */
 
-/*POSITIONS-----------------------------------*/
-/* DOTS POSITIONS & DIALOG BOX POSITIONS */
-
-/* For add other Dialogs add the semae with the position   margin-top: 'your position h' ; margin-left:  'your position w'; and the class name */
-/* For add other Dots add the semae with the position   margin-top: 'your position h' ; margin-left:  'your position w'; and the class name */
-
-.dot-men-shoes {
-  margin-top: 29%;
-  margin-left: 46%;
-  position: absolute;
-  z-index: 1002;
-}
-
-/*Example for.dot-men-t-shirt (second dot)*/
-
-.dot-men-t-shirt {
-  margin-top: calc(41% + 0px);
-  margin-left: 6%;
-  position: absolute;
-  z-index: 1002;
-}
-/* End example (Example for.dot-men-t-shirt)*/
-
-.dialog {
-  margin-top: 32%;
-  margin-left: 41%;
-  animation: SmalltoNormalDialog 6.5s;
-  position: absolute;
-  z-index: 1000;
-}
-
-/*Example for dialog-t-shirt (second dialog)*/
-.dialog-t-shirt {
-  margin-top: 43%; /* change this for vertical position, usually is the dot position more 25px*/
-  margin-left: 1.9%; /* change this for horizontal position, usually is the dot positon less 85 */
-  position: absolute;
-  z-index: 1000;
-}
-
-/*End example (Example for dialog-t-shirt)*/
 
 .box {
   animation: SmalltoNormalDialog 1s;
@@ -296,12 +234,14 @@ body::-webkit-scrollbar {
 *
 */
 
+/* Contenedor de puntos */
 .points-container {
   position: absolute;
   top: 0px;
   z-index: 1002;
 }
 
+/* Punto genérico */
 .point {
   position: absolute;
   width: 20px;
@@ -324,7 +264,7 @@ body::-webkit-scrollbar {
   }
 }
 
-/* For screen less of 1300 píxeles */
+/* Media query para pantallas más pequeñas */
 @media (max-height: 1300px) {
   .rs-module {
     height: 100vh;
@@ -336,6 +276,7 @@ body::-webkit-scrollbar {
   }
 }
 
+/* Botón de menú */
 .buttonMenu {
   font-size: x-large;
   font-weight: 900;
@@ -353,6 +294,8 @@ body::-webkit-scrollbar {
   padding: 4px;
 }
 
+
+/* Elemento de menú */
 .menuItemButton {
   background-color: #ffffff00;
   font-size: x-large;
@@ -366,18 +309,16 @@ body::-webkit-scrollbar {
   border: none;
 }
 
+/* Contenedor de texto */
 .contenedor-texto {
   max-width: 55vw;
-
   overflow: hidden;
-
   text-overflow: ellipsis;
-
   border: 1px solid #25ab0000;
-
   color: white;
 }
 
+/* Menú */
 .menu {
   top: 0;
   left: 0;
@@ -390,36 +331,30 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+/* Media query para ocultar elementos en pantallas más grandes */
 @media (min-width: 700px) {
   .buttonMenu {
     display: none;
   }
-  .menu {
-    display: none;
-  }
 }
 
+
+/* Estilos para botones de navegación */
 .navigateButton{
   position: absolute;
   background-color: #ffffff00;
   z-index: 100300;
   border: none;
   height: 30px;
-  /* width:30px; */
-  /* margin-top: 20px;
-  margin-left: 50px; */
   border: 2px solid rgb(255, 255, 255);
   border-radius: 30px;
   width:auto;
   display: flex ;
   flex-direction: row;
-  /* display: table-row;
-  content: initial; */
- 
 
 }
 
-
+/* Estilos para ícono de navegación dentro del botón */
 .navigateButton .navigateRow{
   color: #f0f0f0;
   fill: #f0f0f0;
@@ -428,11 +363,13 @@ body::-webkit-scrollbar {
 }
 
 
-
+/* Mostrar texto al pasar el mouse sobre el botón */
 .navigateButton:hover .text {
   display: block;
 }
 
+
+/* Estilos para el texto dentro del botón */
 .navigateButton .text{
   display: none;
   color: #f0f0f0;
@@ -441,13 +378,14 @@ body::-webkit-scrollbar {
 }
 
 
-
+/* Mostrar texto en color oscuro al pasar el mouse sobre el texto */
 .text:hover{
   display: block;
   color: #010101;
 
 }
 
+/* Cambiar color del botón al pasar el mouse sobre él */
 .navigateButton:hover {
 
   color: #010101;
