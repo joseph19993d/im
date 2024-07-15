@@ -42,6 +42,4 @@ Este proyecto consiste en un banner interactivo con puntos animados sobre una im
 
 ## Contacto y Contribuciones
 
-Joseph Rodelo Suarez
-
-Para contribuir al proyecto, por favor abre un Pull Request o contacta a [tu correo electrónico].
+--> Joseph Rodelo Suarez // GETS
