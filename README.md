@@ -36,6 +36,8 @@ Este proyecto consiste en un banner interactivo con puntos animados sobre una im
 
 ## Ejemplos
 
+https://joseph19993d.github.io/im/
+
 1. La imagen `tiendas-de-ropa.jpg` servirá de fondo del banner interactivo.
 2. Los puntos sobre la imagen se posicionan automáticamente según los datos de `initial.json`.
 3. Interactúa con los puntos para ver animaciones y obtener más información sobre cada ubicación.
