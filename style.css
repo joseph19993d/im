@@ -1,9 +1,7 @@
 /* CSS */
 
-
-body{
+body {
   background-color: rgba(249, 249, 249, 0);
-  /* padding: 0; */
   margin: 0;
   overflow: hidden;
 }
@@ -16,10 +14,6 @@ body{
   position: absolute;
   scrollbar-color: none;
   background-color: rgb(0, 0, 0);
-  /* min-width: screen ;
-  min-height: 480px; */
-  
-
 }
 
 .rs-module::-webkit-scrollbar {
@@ -34,9 +28,6 @@ body{
   display: block;
   scrollbar-color: none;
   z-index: 101;
-  /* width: 1000px; */
-  /* min-width: 1300px; */
-  /* max-height: 1366px; */
   overflow: auto;
 }
 
@@ -86,18 +77,6 @@ body::-webkit-scrollbar {
   animation: grow 1.5s infinite;
 }
 
-/* .dot::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  margin: -50px 0 0 -90px;
-} */
 
 /* For add other dots change dot-{secon name indicate}-{third name indicate} */
 /* For add other Dialogs change dialog-{secon name indicate}-{third name indicate} */
@@ -118,7 +97,6 @@ body::-webkit-scrollbar {
 .dot-men-t-shirt:hover + .dialog-t-shirt .chule-direction {
   display: block;
 }
-
 
 .dot:hover + .box {
   display: block;
@@ -167,7 +145,7 @@ body::-webkit-scrollbar {
 /*End example (Example for dialog-t-shirt)*/
 
 .box {
-  animation: SmalltoNormalDialog 1.0s;
+  animation: SmalltoNormalDialog 1s;
   height: auto;
   background-color: rgb(255, 255, 255);
   z-index: 1000;
@@ -177,12 +155,9 @@ body::-webkit-scrollbar {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-radius: 50px;
-  /* min-width: 100px; */
   text-align: center;
   font-size: x-large;
   font-family: “Brush Script MT”;
-  /* Un commit on finish  (display: none;) is necesary*/
-  /* display: none; */
   padding-left: 12px;
   padding-right: 8px;
   padding-top: 5px;
@@ -200,27 +175,37 @@ body::-webkit-scrollbar {
   width: 17px;
   height: 17px;
   border-radius: 0%;
-  /* transform: rotate(46deg); */
   position: relative;
   top: -48.5px;
   left: 0px;
   z-index: 30;
   margin: auto;
-  /* Un commit  (display: none;) is necesary*/
-  /* display: none; */
-  clip-path: polygon(50% 50%, 100% 100%, 0% 100%); /* Recorta el elemento en forma de triángulo */
-  background-image: 
-  linear-gradient(
-  to bottom,
-  #010101,
-  #ffffff
-);
+  clip-path: polygon(
+    50% 50%,
+    100% 100%,
+    0% 100%
+  ); 
+  background-image: linear-gradient(to bottom, #010101, #ffffff);
 }
 
-/* animations */
+/**
+*
+*
+* ANIMATIONS OR KEYFRAMES 
+*
+*
+*/
+
+/**
+ * ----------------------------------------
+ * animation grow for points 
+ * ----------------------------------------
+ */
 
 @keyframes grow {
-  0%{ transform: scale(0.5);  }
+  0% {
+    transform: scale(0.5);
+  }
   100% {
     transform: scale(1);
     opacity: 15%;
@@ -230,26 +215,38 @@ body::-webkit-scrollbar {
     opacity: 100%;
   }
 }
-
-
-@keyframes blurizable{
-  0%{filter: blur(1px);}
+/**
+ * ----------------------------------------
+ * animation blur /for img on menu opend
+ * ----------------------------------------
+ */
+@keyframes blurizable {
+  0% {
+    filter: blur(1px);
+  }
   100% {
     filter: blur(10px);
   }
-
 }
-
-@keyframes outBlur{
-  0%{filter: blur(10px);}
+/**
+ * ----------------------------------------
+ * animation blur /for menu on menu close
+ * ----------------------------------------
+ */
+@keyframes outBlur {
+  0% {
+    filter: blur(10px);
+  }
   100% {
     filter: blur(0px);
   }
-
 }
 
-
-
+/**
+ * ----------------------------------------
+ * animation SmalltoNormalDialog /for dialog on dot hover
+ * ----------------------------------------
+ */
 @keyframes SmalltoNormalDialog {
   0% {
     transform: scale(0.5);
@@ -259,14 +256,12 @@ body::-webkit-scrollbar {
   }
 }
 
-
-
 /**
  * ----------------------------------------
- * animation slide-in-left
+ * animation slide-in-left for buttons on menu open
  * ----------------------------------------
  */
- @keyframes slide-in-left {
+@keyframes slide-in-left {
   0% {
     transform: translateX(-1000px);
     opacity: 0;
@@ -277,13 +272,12 @@ body::-webkit-scrollbar {
   }
 }
 
-
 /**
  * ----------------------------------------
- * animation slide-out-left
+ * animation slide-out-left for buttons on menu close
  * ----------------------------------------
  */
- @keyframes slide-out-left {
+@keyframes slide-out-left {
   0% {
     transform: translateX(0);
     opacity: 1;
@@ -294,72 +288,18 @@ body::-webkit-scrollbar {
   }
 }
 
-
-
-
-/* you have to add all the dot and dialog */
-/* @media (width<1300px) {
-  .dot-men-shoes {
-    margin-top: 371px;
-    margin-left: 590px;
-  }
-
-  .dialog {
-    margin-top: 408px;
-    margin-left: 506px;
-  }
-
-  .dot-men-t-shirt {
-    margin-top: 531px;
-    margin-left: 69px;
-  }
-
-  .dialog-t-shirt {
-    margin-top: 566px;
-    margin-left: -13px;
-  }
-}
-
-@media (width>2000px) {
-  .dialog {
-   
-    margin-top: 32%;
-    margin-left: 43%;
-  }
-}
-
-@media (width>2900px) {
-  #slider {
-    width: 3000px;
-  }
-} */
-
-/* 
-@media (width>1600px) {
-
-
-  .dot-men-shoes {
-    margin-top: 371px;
-    margin-left: 590px;
-  }
-
-  .dialog {
-    margin-top: 408px;
-    margin-left: 506px;
-  }
-
-  .dot-men-t-shirt{
-    margin-top:  531px;
-    margin-left: 69px;
-  }
-
-} 
+/**
+*
+*
+* END ANIMATIONS OR KEYFRAMES 
+*
+*
 */
 
-.points-container{
+.points-container {
   position: absolute;
   top: 0px;
-  z-index: 1002
+  z-index: 1002;
 }
 
 .point {
@@ -369,115 +309,147 @@ body::-webkit-scrollbar {
   z-index: 1004;
   background-color: rgba(255, 255, 255, 0);
   border-radius: 50%;
-  /* margin-top: calc(50% + 0px);
-  margin-left: 50%; */
   z-index: 1004;
 }
 
-
 /* pantalla es de al menos 1300 píxeles osea , mas de 1300 px */
 @media (min-height: 1300px) {
-  
-  .rs-module{
+  .rs-module {
     height: 100vh;
     min-width: 100vw;
   }
-  #slider-1{
+  #slider-1 {
     height: 100vh;
     /* min-width: 100%; */
   }
-  
 }
 
-
-
-/* pantalla de menos de 1300 píxeles */
-
+/* For screen less of 1300 píxeles */
 @media (max-height: 1300px) {
-  
-  .rs-module{
+  .rs-module {
     height: 100vh;
     min-width: 100vw;
   }
-  #slider-1{
+  #slider-1 {
     height: 110vh;
     min-width: 100vw;
   }
-  
 }
 
-
-.buttonMenu{
-   
-   font-size: x-large;
-   font-weight:900;
-   position: fixed ;
-   background-color: #ffffff00;
-   text-transform:capitalize;
-   text-align: center;
-   text-decoration: none; 
-   border: 1px solid #ffffff; 
-   color: #ffffff;
-   z-index: 10300;
-   bottom: 15px;
-   left: 15px;
-   margin: 4px;
-   padding: 4px;
+.buttonMenu {
+  font-size: x-large;
+  font-weight: 900;
+  position: fixed;
+  background-color: #ffffff00;
+  text-transform: capitalize;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  z-index: 10300;
+  bottom: 15px;
+  left: 15px;
+  margin: 4px;
+  padding: 4px;
 }
 
-.menuItemButton{
-
+.menuItemButton {
   background-color: #ffffff00;
   font-size: x-large;
-  font-weight:900;
-  text-transform:capitalize;
+  font-weight: 900;
+  text-transform: capitalize;
   text-align: start;
   text-decoration: none;
   text-overflow: ellipsis;
   position: relative;
-  /* padding: 0;
-   */
   margin-top: 10px;
   border: none;
-  /* animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; */
-
 }
 
 .contenedor-texto {
-  max-width:55vw; 
-  /* Ajusta el ancho del contenedor según sea necesario */
-  /* white-space: nowrap; */
-   /* Evita que el texto se divida en varias líneas */
-  overflow: hidden; 
-  /* Oculta el texto que desborda del contenedor */
-  text-overflow: ellipsis; 
-  /* Añade puntos suspensivos (...) al final del texto desbordado */
-  border: 1px solid #25ab0000; 
-  /* Opcional: para visualizar mejor el contenedor */
+  max-width: 55vw;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  border: 1px solid #25ab0000;
+
   color: white;
 }
 
-.menu{
-  top:0;
-  left:0;
+.menu {
+  top: 0;
+  left: 0;
   height: 100%;
-  position: fixed ;
+  position: fixed;
   background-color: #fcfcfc00;
-  border: 3px solid #ff000000; 
+  border: 3px solid #ff000000;
   color: #ffffff;
   z-index: 10300;
   display: none;
-
 }
 
-@media ( min-width: 700px ){
-  .buttonMenu{
-    display:none ;
+@media (min-width: 700px) {
+  .buttonMenu {
+    display: none;
   }
-  .menu{
+  .menu {
     display: none;
   }
 }
 
+.navigateButton{
+  position: absolute;
+  background-color: #ffffff00;
+  z-index: 100300;
+  border: none;
+  height: 30px;
+  /* width:30px; */
+  /* margin-top: 20px;
+  margin-left: 50px; */
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 30px;
+  width:auto;
+  display: flex ;
+  flex-direction: row;
+  /* display: table-row;
+  content: initial; */
+ 
+
+}
 
 
+.navigateButton .navigateRow{
+  color: #f0f0f0;
+  fill: #f0f0f0;
+  margin-top: 1.5px;
+  margin-left: -2.5px;
+}
+
+
+
+.navigateButton:hover .text {
+  display: block;
+}
+
+.navigateButton .text{
+  display: none;
+  color: #f0f0f0;
+  margin-top: 4.5px;
+
+}
+
+
+
+.text:hover{
+  display: block;
+  color: #010101;
+
+}
+
+.navigateButton:hover {
+
+  color: #010101;
+
+}
