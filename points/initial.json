@@ -3,10 +3,10 @@
     {"x":2082, "y":1108 , "color": "" , "text": "Shoes" , "id": "shoes2 ", "xd": 300, "yd" :400, 
     "pointContainer": "shoes2Point", "url":"https://legendgang.com/collections/jordan" , "type": "produt"},
 
-    {"x":202, "y":1108 , "color": "" , "text": "Boton de ejemplo" , "id": "shoes2 ", "xd": 300, "yd" :400, 
+    {"x":202, "y":1108 , "color": "" , "text": "Boton de ejemplo" , "id": "shoes3 ", "xd": 300, "yd" :400, 
     "pointContainer": "shoes2Point", "url":"https://legendgang.com/collections/jordan" , "type": "page"},
 
-    {"x":1082, "y":1108 , "color": "" , "text": "Boton de ejemplo" , "id": "shoes2 ", "xd": 300, "yd" :400, 
+    {"x":1082, "y":1108 , "color": "" , "text": "Boton de ejemplo" , "id": "shoes4 ", "xd": 300, "yd" :400, 
     "pointContainer": "shoes2Point", "url":"https://legendgang.com/collections/jordan" , "type": "page"},
 
     {"x":500, "y":600 , "color": "" , "text": "T-shirts" , "id": "shirt3 ", "xd": 300, "yd" :400, 
