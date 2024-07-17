@@ -294,7 +294,6 @@ body::-webkit-scrollbar {
   padding: 4px;
 }
 
-
 /* Elemento de menú */
 .menuItemButton {
   background-color: #ffffff00;
@@ -351,7 +350,6 @@ body::-webkit-scrollbar {
   width:auto;
   display: flex ;
   flex-direction: row;
-
 }
 
 /* Estilos para ícono de navegación dentro del botón */
@@ -374,7 +372,6 @@ body::-webkit-scrollbar {
   display: none;
   color: #f0f0f0;
   margin-top: 4.5px;
-
 }
 
 
@@ -382,12 +379,12 @@ body::-webkit-scrollbar {
 .text:hover{
   display: block;
   color: #010101;
-
 }
 
 /* Cambiar color del botón al pasar el mouse sobre él */
 .navigateButton:hover {
-
   color: #010101;
-
 }
+
+
+

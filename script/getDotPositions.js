@@ -8,7 +8,16 @@ function handleResize() {
 
 window.addEventListener("resize", handleResize);
 
-function setPoints() {
+function waitByCounterPair(counter){
+
+  if (counter % 2 == 0) {
+     return new Promise( resolve=>(setTimeout(resolve, 8000)));
+  }else {return new Promise( resolve=>(setTimeout(() => { }, 0)))};
+
+}
+
+async function setPoints() {
+
   console.log("cargando puntos");
 
   const image = document.getElementById("slider-1");
@@ -25,8 +34,15 @@ function setPoints() {
     .then((response) => response.json())
     .then((points) => {
       // Iterar sobre cada punto y crear un elemento para cada uno
+      let counter = 0;
       points.forEach((point) => {
         if (point.type == "produt") {
+
+          counter += 1;
+
+         
+
+
           const pointContainer = document.createElement("div");
 
           pointContainer.className = "points-container";
@@ -69,6 +85,7 @@ function setPoints() {
           // console.log(thisDialog);
           // Add div point center
           createPointElementCenter(point.id, thisDialog, point.url);
+          
         }
       });
       points.forEach((point) => {
@@ -82,7 +99,7 @@ function setPoints() {
           const pointY = (imageRect.height * pointYPercent) / 100;
 
           const widthButton = `${point.text.length * 7}`;
-          console.log(widthButton + " píxeles");
+          // console.log(widthButton + " píxeles");
           const container = document.getElementById("rs-module");
 
           // Crear un contenedor para el punto
@@ -120,7 +137,6 @@ function setPoints() {
 }
 
 function createPointElementCenter(id, thisDialog, url) {
-
   const lastPointElement = document.getElementById(id);
   if (lastPointElement) {
     const centerPointElement = document.createElement("div");
@@ -129,11 +145,9 @@ function createPointElementCenter(id, thisDialog, url) {
     // centerPointElement.addEventListener("click", () => clickButtonAction(url));
     lastPointElement.appendChild(centerPointElement);
   }
-  
 }
 
 function addDialogElement(id, container, x, y, text) {
-
   const lastPointElement = document.getElementById(id);
 
   if (lastPointElement) {
@@ -147,8 +161,8 @@ function addDialogElement(id, container, x, y, text) {
       dialogBoxElement.style.marginTop = y + "px";
 
       container.appendChild(dialogBoxElement);
-     
-      const thisDialog = document.getElementById(id);
+
+      // const thisDialog = document.getElementById(id);
 
       // Add chule direction
       chuleDirection(dialogBoxElement, x, y);
@@ -157,23 +171,19 @@ function addDialogElement(id, container, x, y, text) {
     } catch (err) {
       throw new Error(`Error en dialogo ${id}`);
     }
-
   }
   return false;
 }
 
 function chuleDirection(container, x, y) {
-
   const dialogBoxChuleElement = document.createElement("div");
   dialogBoxChuleElement.className = "chule-direction";
   dialogBoxChuleElement.innerHTML = "";
   dialogBoxChuleElement.style.Left = "-30px";
   container.appendChild(dialogBoxChuleElement);
-
 }
 
 function clickButtonAction(url) {
-
   console.log("clickButtonAction on");
 
   if (confirm(`Redirigiendo `)) {

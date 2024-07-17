@@ -12,7 +12,13 @@
     {"x":500, "y":600 , "color": "" , "text": "T-shirts" , "id": "shirt3 ", "xd": 300, "yd" :400, 
     "pointContainer": "shirt3Point", "url":"https://legendgang.com/collections/tshirts", "type": "produt"},
     
-    {"x":1200, "y":950 , "color": "" , "text": "Jeans" , "id": "shirt4 ", "xd": 300, "yd" :400, 
+    {"x":1100, "y":950 , "color": "" , "text": "Jeans" , "id": "shirt4 ", "xd": 300, "yd" :400, 
+    "pointContainer": "shirt3Point", "url":"https://legendgang.com/collections/jeans-1", "type": "produt"},
+    {"x":300, "y":550 , "color": "" , "text": "Jeans" , "id": "shirt5 ", "xd": 300, "yd" :400, 
+    "pointContainer": "shirt3Point", "url":"https://legendgang.com/collections/jeans-1", "type": "produt"},
+    {"x":400, "y":650 , "color": "" , "text": "Jeans" , "id": "shirt6 ", "xd": 300, "yd" :400, 
+    "pointContainer": "shirt3Point", "url":"https://legendgang.com/collections/jeans-1", "type": "produt"},
+    {"x":200, "y":950 , "color": "" , "text": "Jeans" , "id": "shirt7 ", "xd": 300, "yd" :400, 
     "pointContainer": "shirt3Point", "url":"https://legendgang.com/collections/jeans-1", "type": "produt"}
     
 ]
