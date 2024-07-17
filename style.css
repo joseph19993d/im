@@ -378,16 +378,15 @@ body::-webkit-scrollbar {
   /* display: none; */
   color: #f0f0f0;
   margin-top: 4.5px;
-  transition: width 1s ease; /* Transición suave para el cambio de ancho */
+  transition: width 0.5s ease; /* Transición suave para el cambio de ancho */
 
 }
 
 
 /* Mostrar texto en color oscuro al pasar el mouse sobre el texto */
-.text:hover{
-  display: block;
-  color: #010101;
-}
+/* .text:hover{
+ 
+} */
 
 /* Cambiar color del botón al pasar el mouse sobre él */
 .navigateButton:hover {
