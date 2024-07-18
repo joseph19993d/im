@@ -383,11 +383,6 @@ body::-webkit-scrollbar {
 }
 
 
-/* Mostrar texto en color oscuro al pasar el mouse sobre el texto */
-/* .text:hover{
- 
-} */
-
 /* Cambiar color del botón al pasar el mouse sobre él */
 .navigateButton:hover {
   color: #010101;

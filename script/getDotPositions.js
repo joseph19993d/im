@@ -204,9 +204,5 @@ function chuleDirection(container, x, y) {
 
 
 function clickButtonAction(url) {
-  console.log("clickButtonAction on");
-
-  if (confirm(`Redirigiendo `)) {
     window.location.href = url; // Redirige a la URL especificada
-  }
 }
