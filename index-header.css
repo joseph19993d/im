@@ -1,0 +1,127 @@
+
+  
+  .header {
+    font-family: 'Arial', sans-serif;
+    background-color: rgba(0, 0, 0, 0.4); /* Hacer el fondo transparente */
+    padding: 10px 0;
+    width: 100%;
+    position: fixed; /* Fijar el header en la parte superior */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegurarse de que el header esté sobre otros elementos */
+  }
+  
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    color: #fff; /* Ajustar el color para mayor visibilidad */
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) both
+  }
+  
+  
+  .nav {
+    flex-grow: 1;
+    text-align: right;
+  }
+  
+  .nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .nav-item {
+    margin-left: 20px;
+
+  }
+  
+  .nav-item a {
+    color: #fff; /* Ajustar el color para mayor visibilidad */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-item a.active {
+    color: #ffffff; 
+  }
+  
+  .nav-item a.inactive {
+    opacity: 0.5;
+    color: #999; /* Color gris para los elementos que no están en hover */
+    animation:text-blur-out ;
+  }
+
+
+  /* Estilo para el texto seleccionado */
+::selection {
+    background: #ffffff00; /* Fondo verde para el texto seleccionado (opcional) */
+    color: #000000; /* Color del texto seleccionado negro */
+  }
+
+
+  /* Estilos del dropdown */
+.dropdown-toggle::after {
+    content: ' ▼'; /* Flecha hacia abajo para el dropdown */
+    font-size: 12px;
+  }
+  
+  .dropdown {
+    position: relative; /* Necesario para el dropdown-menu */
+  }
+  
+  .dropdown-menu {
+    display: none; /* Ocultar el menú desplegable por defecto */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.062); /* Fondo blanco con algo de transparencia */
+    padding: 10px 0;
+    list-style: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+    z-index: 1000; /* Asegurarse de que el dropdown esté sobre otros elementos */
+  }
+  
+  .dropdown-menu li {
+    margin: 0;
+  }
+  
+  .dropdown-menu a {
+    color: #ffffff; /* Color del texto en el dropdown */
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #0000006c; /* Color de fondo al pasar el ratón por encima del ítem del dropdown */
+  }
+  
+  /* Mostrar el menú desplegable cuando se pase el ratón sobre el elemento */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  
+  @keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
+  @keyframes text-blur-out{0%{filter:blur(.5)}100%{filter:blur(1.5px) opacity(100)}}
+
+  @media (max-width: 700px) {
+    .header {
+      display: none;
+    }
+  }
+  
+

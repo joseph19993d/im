@@ -131,9 +131,9 @@ async function setPoints() {
 
   const container = document.getElementById("rs-module");
 
-  const originalImageWidth = 2560; // Ancho original de la imagen
+  const originalImageWidth = 4034; // Ancho original de la imagen
 
-  const originalImageHeight = 1440; // Alto original de la imagen
+  const originalImageHeight = 3024; // Alto original de la imagen
 
   // Cargar los datos de puntos desde el archivo JSON
   fetch("./points/initial.json")
