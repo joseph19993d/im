@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link rel="stylesheet" href="{{ 'style.css' | asset_url }}" />
+
+    <link rel="stylesheet" href="{{ 'dots-store-index-header.css' | asset_url }}" />
+
+    <title>Img Static</title>
+</head>
+
+<body>
+
+    <header class="header" id="headerInitial" >
+    </header>
+
+    <a href="/" class=" logo-mobile "  >LEGEND GANG</a>
+
+
+    <section class="menu" id="menu" style="display: none;">
+    </section>
+
+
+    <section class="pagebuttons" id="pagebuttons">
+    </section>
+
+    <button class="buttonMenu" id="buttonMenu" onclick="showMenu()">
+        menu
+    </button>
+
+    <section id="rs-module" class="rs-module">
+        <img id="slider-1" class="slider"
+            src="https://cdn.shopify.com/s/files/1/0765/8242/0785/files/shoes-store-points.jpg?v=1722090686"
+            alt="Tienda de ropa" />
+    </section>
+
+    <script src="{{ 'dots-store-menu.js' | asset_url }}" defer="defer"></script>
+
+    <script src="{{ 'dots-store-getHeader.js' | asset_url }}" defer="defer"></script>
+
+
+    <script>
+        var jsonFilePath = '{{ "dots-initial.json" | asset_url }}';
+    </script>
+
+    <script src="{{'dots-store-center.js' | asset_url }} " defer="defer"></script>
+
+    <script src="{{'dots-store-getDotPositions.js' | asset_url }} " defer="defer"></script>
+
+    <script src="{{'dots-store-header.js' | asset_url }} " defer="defer"></script>
+
+    <script src="{{ 'dots-store-header.js '| asset_url }}" defer="defer"></script>
+
+</body>
+
+</html>

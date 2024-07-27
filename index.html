@@ -14,39 +14,14 @@
 
   <body>
 
-    <header class="header">
-      <div class="header-container">
-        <a href="#" class="logo">LEGEND GANG</a>
-        <nav class="nav">
-          <ul class="nav-list">
-            <li class="nav-item"><a href="#">Home</a></li>
-            <li class="nav-item dropdown">
-              <a href="#" class="dropdown-toggle">Sections</a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Shoes</a></li>
-                <li><a href="#">Tshirts</a></li>
-                <li><a href="#">Pants</a></li>
-              </ul>
-            </li>
-            <li class="nav-item"><a href="#">Shop All</a></li>
-            <li class="nav-item"><a href="#">Contact</a></li>
-            
-          </ul>
-        </nav>
-      </div>
+    <header class="header" id="headerInitial" >
     </header>
 
+    <a href="/" class=" logo-mobile "  >LEGEND GANG</a>
+
+
     <section class="menu" id="menu" style="display: none;">
-      <button class="menuItemButton"  id="menuItemButton1"> 
-        <div class="contenedor-texto">
-          Este es una opcion.
-        </div>
-      </button>
-      <button class="menuItemButton" > 
-        <div class="contenedor-texto" id="menuItemButton2">
-          Este es otra opcion.
-        </div>
-      </button>
+
     </section>
 
 
@@ -66,11 +41,16 @@
       ></img>
     </section>
 
+    <script>
+      var imgH = 4034;
+      var imgW = 3024;
+    </script>
     <script src="./script/header.js"></script>
     <script src="./script/getDotPositions.js"> </script>
     <script src="./script/center.js"></script>
     <script src="./script/positionClickListener.js"></script>
     <script src="./script/menu.js"></script> 
+    <script src="./script/getHeader.js"></script>
     
   </body>
   

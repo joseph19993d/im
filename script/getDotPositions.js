@@ -89,7 +89,6 @@ function createPagePoint( point, image, container, originalImageWidth, originalI
   const pointY = (imageRect.height * pointYPercent) / 100;
 
   const widthButton = `${point.text.length * 7}`;
-  console.log(widthButton + " píxeles");
 
   // Crear un contenedor para el punto
   const pointContainer = document.createElement("div");
@@ -102,7 +101,7 @@ function createPagePoint( point, image, container, originalImageWidth, originalI
   buttonElement.className = "navigateButton";
   buttonElement.style.left = `${pointX}px`;
   buttonElement.style.top = `${pointY}px`;
-//width:${widthButton}px;
+
   buttonElement.innerHTML = `
     <svg class="navigateRow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#000000" viewBox="0 0 256 256">
         <path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"></path>
@@ -125,15 +124,13 @@ function createPagePoint( point, image, container, originalImageWidth, originalI
 
 async function setPoints() {
 
-  console.log("cargando puntos");
-
   const image = document.getElementById("slider-1");
 
   const container = document.getElementById("rs-module");
 
-  const originalImageWidth = 4034; // Ancho original de la imagen
+  const originalImageWidth = imgH ? imgH:2000  ; // Ancho original de la imagen
 
-  const originalImageHeight = 3024; // Alto original de la imagen
+  const originalImageHeight = imgW ? imgW:2000 ; // Alto original de la imagen
 
   // Cargar los datos de puntos desde el archivo JSON
   fetch("./points/initial.json")

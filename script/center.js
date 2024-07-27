@@ -14,7 +14,7 @@ function centerScroll(tipe) {
         behavior: "smooth"
     });
 
-    console.log("Navegando al centro "+tipe);
+    // console.log("Navegando al centro "+tipe);
 }
 
 // Función para manejar el cambio de orientación
