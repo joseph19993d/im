@@ -29,7 +29,7 @@ body {
   scrollbar-color: none;
   z-index: 101;
   overflow: auto;
-  animation: outBlur 2s;
+  animation: outBlur 3s;
 }
 
 body::-webkit-scrollbar {
@@ -174,7 +174,7 @@ body::-webkit-scrollbar {
  */
 @keyframes outBlur {
   0% {
-    filter: blur(10px);
+    filter: blur(15px);
   }
   100% {
     filter: blur(0px);
@@ -388,7 +388,7 @@ body::-webkit-scrollbar {
 /* Estilos para ícono de navegación dentro del botón */
 .navigateButton .navigateRow{
   color: #f0f0f0;
-  fill: #f0f0f0;
+  fill: rgb(255, 255, 255);
   margin-top: 1.5px;
   margin-left: -2.5px;
 }
@@ -415,6 +415,10 @@ body::-webkit-scrollbar {
 
 }
 
+.text:hover{
+  color: #ffffff;
+  transform: scale(1.07);
+}
 
 /* Cambiar color del botón al pasar el mouse sobre él */
 .navigateButton:hover {

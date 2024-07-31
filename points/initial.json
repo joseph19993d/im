@@ -1,23 +1,18 @@
 [
 
-    
-    {"x":2082, "y":1108 , "color": "" , "text": "SHOES" , "id": "shoes2 ", "xd": 300, "yd" :400, 
-    "pointContainer": "shoes2Point", "url":"https://legendgang.com/collections/jordan" , "type": "produt"},
+    {"x":3144, "y":1086 , "color": "" , "text": "Go to shoes section." , "id": "shoes3 ", "xd": 300, "yd" :400, 
+    "pointContainer": "shoes2Point", "url":"/pages/shoes" , "type": "page", "directionRow":270},
 
-    {"x":3144, "y":1076 , "color": "" , "text": "Go to shoes." , "id": "shoes3 ", "xd": 300, "yd" :400, 
-    "pointContainer": "shoes2Point", "url":"/pages/shoes" , "type": "page"},
+    {"x":2937, "y":1376 , "color": "black" , "text": "T-shirts" , "id": "shirt3 ", "xd": 300, "yd" :400, 
+    "pointContainer": "shirt3Point", "url":"pages/t-shirts", "type": "page", "directionRow":0},
 
-    {"x":3067, "y":1476 , "color": "" , "text": "T-SHIRT" , "id": "shirt3 ", "xd": 300, "yd" :400, 
-    "pointContainer": "shirt3Point", "url":"https://legendgang.com/collections/tshirts", "type": "produt"},
-    
-    {"x":2103, "y":2192 , "color": "" , "text": "JEANS" , "id": "shirt4 ", "xd": 300, "yd" :400, 
-    "pointContainer": "shirt3Point", "url":"https://legendgang.com/collections/jeans-1", "type": "produt"},
+    {"x":2103, "y":2042 , "color": "" , "text": "Jeans, pants and sweater" , "id": "page2 ", "xd": 300, "yd" :400, 
+    "pointContainer": "shirt3Point", "url":"    /pages/tshirt-and-pants", "type": "page", "directionRow":0},
 
+    {"x":500, "y":1424 , "color": "" , "text": "Supreme collection" , "id": "shirt5 ", "xd": 300, "yd" :400, 
+    "pointContainer": "shirt3Point", "url":"/collections/supreme", "type": "produt", "directionRow":0},
 
-    {"x":500, "y":1424 , "color": "" , "text": "GAP" , "id": "shirt5 ", "xd": 300, "yd" :400, 
-    "pointContainer": "shirt3Point", "url":"https://legendgang.com/collections/jeans-1", "type": "produt"},
-
-    {"x":224, "y":1624 , "color": "" , "text": "JEANS-GANG" , "id": "shirt6 ", "xd": 300, "yd" :400, 
-    "pointContainer": "shirt3Point", "url":"https://legendgang.com/collections/jeans-1", "type": "produt"}
+    {"x":224, "y":1484 , "color": "black" , "text": "Jeans and sweater", "textBackground":"white" , "id": "shirt6 ", "xd": 300, "yd" :400, 
+    "pointContainer": "shirt3Point", "url":"/pages/jeans-and-jackets", "type": "page", "directionRow":90}
     
 ]

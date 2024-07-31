@@ -28,7 +28,6 @@
     animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) both
   }
   
-  
   .nav {
     flex-grow: 1;
     text-align: right;

@@ -54,8 +54,9 @@ async function createProdutPoint ( point, image, container, originalImageWidth, 
   pointElement.style.top = `${pointY}px`;
 
   if (point.color) {
-    pointElement.style.background = point.color;
+    pointElement.style.border = `2px solid ${point.color}`;
   }
+  
 
   pointElement.addEventListener("click", () =>
     clickButtonAction(point.url)
@@ -73,12 +74,17 @@ async function createProdutPoint ( point, image, container, originalImageWidth, 
   );
   // console.log(thisDialog);
   // Add div point center
-  createPointElementCenter(point.id, thisDialog, point.url);
+  createPointElementCenter(point.id, thisDialog, point.url , point.color );
 
 }
 
 
-function createPagePoint( point, image, container, originalImageWidth, originalImageHeight ){
+function createPagePoint( point, image, container, originalImageWidth, originalImageHeight, directionRow  ){
+
+  if(directionRow == undefined){
+    directionRow=0;
+  }
+  console.log("el rango es ", directionRow);
 
   // Calcular coordenadas porcentuales del punto de interés
   const pointXPercent = (point.x / originalImageWidth) * 100;
@@ -101,12 +107,15 @@ function createPagePoint( point, image, container, originalImageWidth, originalI
   buttonElement.className = "navigateButton";
   buttonElement.style.left = `${pointX}px`;
   buttonElement.style.top = `${pointY}px`;
+  if(point.color){
+    buttonElement.style.border=`2px solid ${point.color}`
+  }
 
   buttonElement.innerHTML = `
-    <svg class="navigateRow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#000000" viewBox="0 0 256 256">
+    <svg class="navigateRow" style="fill:${point.color?point.color:'white'} !important;  transform: rotate(${directionRow}deg); transform-origin: center;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256">
         <path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"></path>
     </svg>
-    <div class="text" style=" --ancho:${widthButton}px"> 
+    <div class="text" style=" --ancho:${widthButton}px; color:${point.color?point.color:'white'}; Background:${point.textBackground?point.textBackground:"none" } ; border-radius: 5px; " > 
         ${point.text} &nbsp;
     </div>
   `;
@@ -128,9 +137,9 @@ async function setPoints() {
 
   const container = document.getElementById("rs-module");
 
-  const originalImageWidth = imgH ? imgH:2000  ; // Ancho original de la imagen
+  const originalImageWidth = imgH ? imgH:4000  ; // Ancho original de la imagen
 
-  const originalImageHeight = imgW ? imgW:2000 ; // Alto original de la imagen
+  const originalImageHeight = imgW ? imgW:3024 ; // Alto original de la imagen
 
   // Cargar los datos de puntos desde el archivo JSON
   fetch("./points/initial.json")
@@ -140,12 +149,13 @@ async function setPoints() {
       let counter = 0;
       points.forEach((point) => {
 
-        if (point.type == "produt") {
-          counter += 1;
-          createProdutPoint( point, image, container, originalImageWidth, originalImageHeight, counter)
-        }else{
-
-          createPagePoint( point, image, container, originalImageWidth, originalImageHeight, counter)
+        if (point.type !== "page") { // Asegúrate de que el tipo es correcto
+            counter += 1;
+            createProdutPoint(point, image, container, originalImageWidth, originalImageHeight, counter);
+        } else {
+            // Verifica si `directionRow` está definido en `point` o usa `0` como valor predeterminado
+            const directionRow = point.directionRow !== undefined ? point.directionRow : 0;
+            createPagePoint(point, image, container, originalImageWidth, originalImageHeight, directionRow );
         }
 
       });
@@ -154,12 +164,15 @@ async function setPoints() {
 }
 
 
-function createPointElementCenter(id, thisDialog, url) {
+function createPointElementCenter(id, thisDialog, url, color) {
   const lastPointElement = document.getElementById(id);
   if (lastPointElement) {
     const centerPointElement = document.createElement("div");
     centerPointElement.className = "dot-center";
     centerPointElement.id = id + "-dot-center";
+    if(color){
+      centerPointElement.style.border= `2px solid ${color}`
+    }
     // centerPointElement.addEventListener("click", () => clickButtonAction(url));
     lastPointElement.appendChild(centerPointElement);
   }
@@ -180,7 +193,7 @@ function addDialogElement(id, container, x, y, text) {
       container.appendChild(dialogBoxElement);
 
       // Add chule direction
-      chuleDirection(dialogBoxElement, x, y);
+      chuleDirection(dialogBoxElement, x, y , 90);
 
       return dialogBoxElement;
     } catch (err) {

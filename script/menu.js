@@ -47,9 +47,11 @@ function showMenu() {
 
 function menuButtonAnimationsInCome() {
 
+
   setTimeout(() => {
     elementAnimatioInCome("menuItemButton1");
-  }, 50);
+  }, 101);
+
 
   setTimeout(() => {
     elementAnimatioInCome("menuItemButton2");
@@ -67,15 +69,22 @@ function menuButtonAnimationsInCome() {
     elementAnimatioInCome("menuItemButton5");
   }, 250);
 
+  setTimeout(() => {
+    elementAnimatioInCome("menuItemButton6");
+  }, 250);
+
+
+
+
 }
 
 
 function menuButtonAnimationsOut() {
 
   setTimeout(() => {
-    elementAnimatioOnOut("menuItemButton1");
-    
-  }, 50);
+    elementAnimatioOnOut("menuItemButton7");
+  }, 100);
+
 
   setTimeout(() => {
     elementAnimatioOnOut("menuItemButton2");
@@ -93,6 +102,14 @@ function menuButtonAnimationsOut() {
     elementAnimatioOnOut("menuItemButton5");
   }, 150);
 
+  setTimeout(() => {
+    elementAnimatioOnOut("menuItemButton6");
+  }, 150);
+
+
+  setTimeout(() => {
+    elementAnimatioOnOut("menuItemButton7");
+  }, 150);
 }
 
 
@@ -110,11 +127,12 @@ function elementAnimatioInCome(butonName) {
 function elementAnimatioOnOut(butonName) {
 
   const element = document.getElementById(butonName);
+  if(element){
   element.style.animationName = "slide-out-left ";
   element.style.animationDuration = "0.5s";
   element.style.animationIterationCount = 1;
   element.style.animationFillMode = "forwards";
-
+  }
 }
 
 
@@ -125,35 +143,42 @@ function loadMenu(){
       menu.innerHTML=
       `
       
-    <button  src="#" class="menuItemButton"  id="menuItemButton1" style="display: none;"> 
+    <button class="menuItemButton"  id="menuItemButton1" style="display: none; "> 
       <div class="contenedor-texto">
-        <a src="/">Home</a>
+        <a href="/collections" style=" text-decoration: none; color: white; "> Home </a>
       </div>
     </button>
 
-    <button  src="#" class="menuItemButton"  id="menuItemButton2" style="display: none;"> 
+    <button class="menuItemButton"  id="menuItemButton2" style="display: none;"> 
       <div class="contenedor-texto">
-        <a src="/collections/all">Shop All </a>
+        <a href="/collections/all" style=" text-decoration: none; color: white; ">Shop All </a>
       </div>
     </button>
 
-    <button src="/collections/" class="menuItemButton" id="menuItemButton3" style="display: none;"> 
+    <button class="menuItemButton" id="menuItemButton3" style="display: none;"> 
       <div class="contenedor-texto" >
-        <a src="#">secion 1.</a>
+        <a href="/pages/shoes" style=" text-decoration: none; color: white;">Shoes</a>
       </div>
     </button>
     
-    <button src="#" class="menuItemButton" id="menuItemButton4" style="display: none;"> 
+    <button class="menuItemButton" id="menuItemButton4" style="display: none;"> 
       <div class="contenedor-texto" >
-        <a src="#">secion 2.</a>
+        <a style=" text-decoration: none; color: white; href="/pages/t-shirts"> T-shirts </a>
       </div>
     </button>
 
-    <button src="#" class="menuItemButton" id="menuItemButton5" style="display: none;"> 
+    <button  class="menuItemButton" id="menuItemButton5" style="display: none;"> 
       <div class="contenedor-texto" >
-        <a src="#">secion 3.</a>
+        <a  href="/pages/tshirt-and-pants" style=" text-decoration: none; color: white; "> Pants </a>
       </div>
     </button>
+
+    <button  class="menuItemButton" id="menuItemButton6" style="display: none;"> 
+      <div class="contenedor-texto" >
+        <a style=" text-decoration: none; color: white; " href="/pages/jeans-and-jackets"> Jeans and Jackets </a>
+      </div>
+    </button>
+
 
       `
   }
