@@ -1,0 +1,74 @@
+[
+
+    {
+        "x": 550,
+        "y": 1492,
+        "color": "",
+        "text": "Dolce gabanna",
+        "textBackground": "black",
+        "id": "shoes23 ",
+        "xd": 300,
+        "yd": 400,
+        "pointContainer": "shoes2Point",
+        "url": "/pages/shoes",
+        "type": "product",
+        "directionRow": 270
+    },
+    {
+        "x": 1800,
+        "y": 1492,
+        "color": "",
+        "text": "Sweater, coats, and Jackets",
+        "textBackground": "black",
+        "id": "shoes3 ",
+        "xd": 300,
+        "yd": 400,
+        "pointContainer": "shoes2Point",
+        "url": "/pages/shoes",
+        "type": "product",
+        "directionRow": 270
+    },
+    {
+        "x": 3490,
+        "y": 1900,
+        "color": "",
+        "text": "Legend Jeans",
+        "textBackground": "white",
+        "id": "shoes4 ",
+        "xd": 300,
+        "yd": 400,
+        "pointContainer": "shoes2Point",
+        "url": "/pages/shoes",
+        "type": "product",
+        "directionRow": 270
+    },
+
+    {
+        "x": 1180,
+        "y": 922,
+        "color": "",
+        "text": "   Back",
+        "textBackground": "black",
+        "id": "shoes5 ",
+        "xd": 300,
+        "yd": 400,
+        "pointContainer": "shoes2Point",
+        "url": "/pages/shoes",
+        "type": "page",
+        "directionRow": 270
+    },
+    {
+        "x": 180,
+        "y": 950,
+        "color": "white",
+        "textBackground": "",
+        "text": " Entrace",
+        "id": "shoes6 ",
+        "xd": 300,
+        "yd": 400,
+        "pointContainer": "shoes2Point",
+        "url": "/",
+        "type": "page",
+        "directionRow": 80
+    }
+]

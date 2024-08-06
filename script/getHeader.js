@@ -7,7 +7,9 @@ function loadHeader() {
     if (header) {
         header.innerHTML = `
             <div class="header-container">
-                <a href="/" class="logo">LEGEND GANG</a>
+                <a href="/" class="logo">
+                 <img src="https://cdn.shopify.com/s/files/1/0765/8242/0785/files/Group_80logo.png?v=1722446570" alt="legend gand Logo">
+                 </a>
                 <nav class="nav">
                     <ul class="nav-list">
                         <li class="nav-item"><a href="/">Home</a></li>

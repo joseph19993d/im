@@ -1,0 +1,124 @@
+[
+   
+    {
+        "x": 1382,
+        "y": 1590,
+        "color": "",
+        "text": " Denim tears 4",
+        "id": "DenimTears ",
+        "xd": 300,
+        "yd": 400,
+        "pointContainer": "shoes2Point",
+        "url": "/",
+        "type": "product",
+        "directionRow": 0,
+        "textBackground": ""
+    },
+
+    {
+        "x": 1582,
+        "y": 1490,
+        "color": "",
+        "text": " Denim tears 5",
+        "id": "shoes3.2 ",
+        "xd": 300,
+        "yd": 400,
+        "pointContainer": "shoes2Point",
+        "url": "/",
+        "type": "product",
+        "directionRow": 0,
+        "textBackground": ""
+    },
+
+    {
+        "x": 1782,
+        "y": 1390,
+        "color": "",
+        "text": " Denim tears 6",
+        "id": "shoes3.23 ",
+        "xd": 300,
+        "yd": 400,
+        "pointContainer": "shoes2Point",
+        "url": "/",
+        "type": "product",
+        "directionRow": 0,
+        "textBackground": ""
+    },
+
+    {
+
+        "x": 1982,
+        "y": 1290,
+        "color": "",
+        "text": " Denim tears 7",
+        "id": "shoes3.24 ",
+        "xd": 300,
+        "yd": 400,
+        "pointContainer": "shoes2Point",
+        "url": "/",
+        "type": "product",
+        "directionRow": 0,
+        "textBackground": ""
+    },
+
+    {
+        "x": 2642,
+        "y": 1092,
+        "color": "",
+        "text": " Denim tears 8",
+        "id": "shoes3.245 ",
+        "xd": 300,
+        "yd": 400,
+        "pointContainer": "shoes2Point",
+        "url": "/",
+        "type": "product",
+        "directionRow": 0,
+        "textBackground": ""
+    },
+
+    {
+        "x": 3562,
+        "y": 1392,
+        "color": "black",
+        "text": " Denim tears 9",
+        "id": "shoes3.246 ",
+        "xd": 300,
+        "yd": 400,
+        "pointContainer": "shoes2Point",
+        "url": "/",
+        "type": "product",
+        "directionRow": 0,
+        "textBackground": ""
+    },
+    
+    {
+        "x": 221,
+        "y": 1162,
+        "color": "",
+        "text": "Go to Entrace..",
+        "id": "shoes35 ",
+        "xd": 300,
+        "yd": 400,
+        "pointContainer": "shoes2Point",
+        "url": "/",
+        "type": "page",
+        "directionRow": 90,
+        "textBackground": "black"
+    },
+
+    {
+        "x": 221,
+        "y": 1362,
+        "color": "",
+        "text": "Go to T-Shirts section..",
+        "id": "shoes36 ",
+        "xd": 300,
+        "yd": 400,
+        "pointContainer": "shoes2Point",
+        "url": "/pages/t-shirts",
+        "type": "page",
+        "directionRow": 90,
+        "textBackground": "black"
+
+    }
+]

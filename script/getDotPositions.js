@@ -41,6 +41,7 @@ async function createProdutPoint ( point, image, container, originalImageWidth, 
   const pointElement = document.createElement("div");
 
   pointElement.className = `point dot`;
+  pointElement.style.width = point.tscale;
   pointElement.id = point.id;
 
   const pointXPercent = (point.x / originalImageWidth) * 100;
@@ -52,15 +53,18 @@ async function createProdutPoint ( point, image, container, originalImageWidth, 
 
   pointElement.style.left = `${pointX}px`;
   pointElement.style.top = `${pointY}px`;
-
-  if (point.color) {
-    pointElement.style.border = `2px solid ${point.color}`;
-  }
   
 
-  pointElement.addEventListener("click", () =>
-    clickButtonAction(point.url)
+  if (point.color) {
+    pointElement.style.border = `0.1px solid ${point.color}`;
+  }
+
+ 
+  pointElement.dataset.disabled = "true";
+  pointElement.addEventListener("click", 
+  () => clickButtonAction('point','navigateButton',pointElement.id,point.url)
   );
+
 
   pointContainer.appendChild(pointElement);
 
@@ -115,14 +119,15 @@ function createPagePoint( point, image, container, originalImageWidth, originalI
     <svg class="navigateRow" style="fill:${point.color?point.color:'white'} !important;  transform: rotate(${directionRow}deg); transform-origin: center;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256">
         <path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"></path>
     </svg>
-    <div class="text" style=" --ancho:${widthButton}px; color:${point.color?point.color:'white'}; Background:${point.textBackground?point.textBackground:"none" } ; border-radius: 5px; " > 
+    <div class="text" style=" --ancho:${widthButton}px; color:${point.color?point.color:'white'}; Background:${point.textBackground?point.textBackground:"none" } ; border-radius: 7px;   " > 
         ${point.text} &nbsp;
     </div>
   `;
 
   // Añadir evento click
+  buttonElement.dataset.disabled = "true";
   buttonElement.addEventListener("click", () =>
-    clickButtonAction(point.url)
+    clickButtonAction('navigateButton','point',buttonElement.id, point.url)
   );
 
   // Añadir el botón al contenedor del punto
@@ -142,7 +147,7 @@ async function setPoints() {
   const originalImageHeight = imgW ? imgW:3024 ; // Alto original de la imagen
 
   // Cargar los datos de puntos desde el archivo JSON
-  fetch("./points/initial.json")
+  fetch("./points/moreSwears.json")
     .then((response) => response.json())
     .then((points) => {
       // Iterar sobre cada punto y crear un elemento para cada uno
@@ -169,9 +174,10 @@ function createPointElementCenter(id, thisDialog, url, color) {
   if (lastPointElement) {
     const centerPointElement = document.createElement("div");
     centerPointElement.className = "dot-center";
+
     centerPointElement.id = id + "-dot-center";
     if(color){
-      centerPointElement.style.border= `2px solid ${color}`
+      centerPointElement.style.backgroundColor= `${color}`
     }
     // centerPointElement.addEventListener("click", () => clickButtonAction(url));
     lastPointElement.appendChild(centerPointElement);
@@ -188,7 +194,7 @@ function addDialogElement(id, container, x, y, text) {
       dialogBoxElement.className = "box";
       dialogBoxElement.innerHTML = text;
       dialogBoxElement.id = id + "-dialog";
-      dialogBoxElement.style.marginLeft = `${x - text.length * 5}px`;
+      dialogBoxElement.style.marginLeft = `${x - text.length * 4.5}px`;
       dialogBoxElement.style.marginTop = y + "px";
       container.appendChild(dialogBoxElement);
 
@@ -213,6 +219,44 @@ function chuleDirection(container, x, y) {
 }
 
 
-function clickButtonAction(url) {
-    window.location.href = url; // Redirige a la URL especificada
+function clickButtonAction(thisclassName,otherClassName,divId, url) {
+
+  const divCliked = document.getElementById(divId);
+  document.querySelectorAll(`.${thisclassName}`).forEach(div => {
+    if(div.id != divCliked.id){
+    div.dataset.disabled = 'true';
+    }
+  });
+  
+  document.querySelectorAll(`.${otherClassName}`).forEach(div => {
+    console.log(div.id);
+    if(div.id != divCliked.id){
+    console.log("Estatus");
+    div.dataset.disabled = 'true';
+    }
+  });
+  
+  if(divCliked.dataset.disabled == 'true' && isPhone()){
+    divCliked.dataset.disabled = 'false';
+  }else{
+    divCliked.dataset.disabled = 'true';
+    window.location.href = url;
+  }
+    
+}
+
+function isPhone() {
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  // Detectar dispositivos móviles
+  if (/android/i.test(userAgent)) {
+      return true;
+  }
+  if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      return true;
+  }
+  if (/windows phone/i.test(userAgent)) {
+      return true;
+  }
+  // Detectar dispositivos de escritorio
+  return false;
 }
