@@ -69,18 +69,57 @@ async function createProdutPoint ( point, image, container, originalImageWidth, 
   pointContainer.appendChild(pointElement);
 
   //add Dialog div Element
+  const savedLanguagePreference = localStorage.getItem('languagePreference');
+    
+ 
+
   const thisDialog = addDialogElement(
     point.id,
     pointContainer,
     `${pointX}`,
     `${pointY + 35}`,
-    point.text
+    getLanguage(savedLanguagePreference, point.text, point.spanishText)
+    
   );
   // console.log(thisDialog);
   // Add div point center
   createPointElementCenter(point.id, thisDialog, point.url , point.color );
 
 }
+
+function getLanguage(lenguche, englishText, spanishText) {
+
+  if (lenguche !== null) {
+      // Si hay un valor guardado, aplicar
+      if (lenguche== 'english' ) {
+        return englishText
+  
+    } else {
+        if( lenguche== 'spanish'  ) {
+          
+          if(spanishText !== undefined && spanishText !== null ){
+            // console.log("en español")
+            return spanishText
+          }else{
+            // console.log("en ingles")
+            if(englishText !== undefined && englishText !== null ){
+              return englishText
+            }else{
+              return 'Not defined';
+            }
+          }
+          
+        }
+    }
+  }else{
+    if(  lenguche == null) {
+      localStorage.setItem('languagePreference','english');
+    }
+    return englishText
+  }
+
+}
+
 
 
 function createPagePoint( point, image, container, originalImageWidth, originalImageHeight, directionRow  ){
@@ -260,3 +299,4 @@ function isPhone() {
   // Detectar dispositivos de escritorio
   return false;
 }
+
