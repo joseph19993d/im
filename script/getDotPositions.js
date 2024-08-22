@@ -153,13 +153,14 @@ function createPagePoint( point, image, container, originalImageWidth, originalI
   if(point.color){
     buttonElement.style.border=`2px solid ${point.color}`
   }
-
+  
+  const savedLanguagePreference = localStorage.getItem('languagePreference');
   buttonElement.innerHTML = `
     <svg class="navigateRow" style="fill:${point.color?point.color:'white'} !important;  transform: rotate(${directionRow}deg); transform-origin: center;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 256">
         <path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"></path>
     </svg>
     <div class="text" style=" --ancho:${widthButton}px; color:${point.color?point.color:'white'}; Background:${point.textBackground?point.textBackground:"none" } ; border-radius: 7px;   " > 
-        ${point.text} &nbsp;
+        ${ getLanguage(savedLanguagePreference, point.text, point.spanishText)} &nbsp;
     </div>
   `;
 
@@ -186,7 +187,7 @@ async function setPoints() {
   const originalImageHeight = imgW ? imgW:3024 ; // Alto original de la imagen
 
   // Cargar los datos de puntos desde el archivo JSON
-  fetch("./points/moreSwears.json")
+  fetch("./points/initial.json")
     .then((response) => response.json())
     .then((points) => {
       // Iterar sobre cada punto y crear un elemento para cada uno
@@ -233,7 +234,7 @@ function addDialogElement(id, container, x, y, text) {
       dialogBoxElement.className = "box";
       dialogBoxElement.innerHTML = text;
       dialogBoxElement.id = id + "-dialog";
-      dialogBoxElement.style.marginLeft = `${x - text.length * 4.5}px`;
+      dialogBoxElement.style.marginLeft = `${x - text.length * 3.25}px`;
       dialogBoxElement.style.marginTop = y + "px";
       container.appendChild(dialogBoxElement);
 

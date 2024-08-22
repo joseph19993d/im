@@ -139,11 +139,52 @@ function elementAnimatioOnOut(butonName) {
 
 function loadMenu(){
   const menu = document.getElementById("menu");
+  
   if(menu){
-      menu.innerHTML=
-      `
-      
-    <button class="menuItemButton"  id="menuItemButton1" style="display: none; "> 
+
+    const spanishContent =`
+    
+     <button class="menuItemButton"  id="menuItemButton1" style="display: none; "> 
+      <div class="contenedor-texto">
+        <a href="/collections" style=" text-decoration: none; color: white; "> Inicio </a>
+      </div>
+    </button>
+
+    <button class="menuItemButton"  id="menuItemButton2" style="display: none;"> 
+      <div class="contenedor-texto">
+        <a href="/collections/all" style=" text-decoration: none; color: white; "> Tienda completa </a>
+      </div>
+    </button>
+
+    <button class="menuItemButton" id="menuItemButton3" style="display: none;"> 
+      <div class="contenedor-texto" >
+        <a href="/pages/shoes" style=" text-decoration: none; color: white;">Zapatos</a>
+      </div>
+    </button>
+    
+    <button class="menuItemButton" id="menuItemButton4" style="display: none;"> 
+      <div class="contenedor-texto" >
+        <a style=" text-decoration: none; color: white; href="/pages/t-shirts"> Camisetas </a>
+      </div>
+    </button>
+
+    <button  class="menuItemButton" id="menuItemButton5" style="display: none;"> 
+      <div class="contenedor-texto" >
+        <a  href="/pages/tshirt-and-pants" style=" text-decoration: none; color: white; "> Pantalones </a>
+      </div>
+    </button>
+
+    <button  class="menuItemButton" id="menuItemButton6" style="display: none;"> 
+      <div class="contenedor-texto" >
+        <a style=" text-decoration: none; color: white; " href="/pages/jeans-and-jackets"> Jeans y chaquetas </a>
+      </div>
+    </button>
+    
+    `;
+
+    const englishContent =`
+    
+     <button class="menuItemButton"  id="menuItemButton1" style="display: none; "> 
       <div class="contenedor-texto">
         <a href="/collections" style=" text-decoration: none; color: white; "> Home </a>
       </div>
@@ -178,11 +219,49 @@ function loadMenu(){
         <a style=" text-decoration: none; color: white; " href="/pages/jeans-and-jackets"> Jeans and Jackets </a>
       </div>
     </button>
+    
+    `;
 
+      const lenguche = localStorage.getItem("languagePreference");
+      menu.innerHTML= getLanguage( lenguche, englishContent, spanishContent)
 
-      `
   }
 
 
+
+}
+
+
+function getLanguage(lenguche, englishContent, spanishContent) {
+
+  if (lenguche !== null) {
+      // Si hay un valor guardado, aplicar
+      if (lenguche== 'english' ) {
+        return englishContent
+
+  
+    } else {
+        if( lenguche== 'spanish'  ) {
+          
+          if(spanishContent !== undefined && spanishContent !== null ){
+            // console.log("en español")
+            return spanishContent
+          }else{
+            // console.log("en ingles")
+            if(englishContent !== undefined && englishContent !== null ){
+              return englishContent
+            }else{
+              return 'Not defined';
+            }
+          }
+          
+        }
+    }
+  }else{
+    if(  lenguche == null) {
+      localStorage.setItem('languagePreference','english');
+    }
+    return englishContent
+  }
 
 }

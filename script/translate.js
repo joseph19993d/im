@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+
     const checkbox = document.getElementById('languageToggle');
 
     // Verificar si hay un valor guardado en localStorage
@@ -30,14 +32,18 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+function traslateThis(){
+    
+}
+
 // Función para cambiar el idioma basado en el estado del checkbox
 function changeLanguage(isEnglish) {
     if (isEnglish) {
-        console.log('Cambiando a inglés');
+        // console.log('Cambiando a inglés');
         // Aquí puedes agregar la lógica para cambiar el idioma a inglés
         
     } else {
-        console.log('Cambiando a español');
+        // console.log('Cambiando a español');
         // Aquí puedes agregar la lógica para cambiar el idioma a español
         
 
