@@ -1,41 +1,12 @@
 [
-    {
-        "x": 3144,
-        "y": 1086,
-        "color": "",
-        "text": "Go to shoes section.",
-        "spanishText": "Ir a esta sección",
-        "textBackground": "black",
-        "id": "shoes3 ",
-        "xd": 300,
-        "yd": 400,
-        "pointContainer": "shoes2Point",
-        "url": "/pages/shoes",
-        "type": "page",
-        "directionRow": 270
-    },
-    {
-        "x": 2937,
-        "y": 1376,
-        "color": "black",
-        "text": " T-shirts",
-        "spanishText": "Camisetas",
-        "textBackground": "white",
-        "id": "shirt3 ",
-        "xd": 300,
-        "yd": 400,
-        "pointContainer": "shirt3Point",
-        "url": "pages/t-shirts",
-        "type": "page",
-        "directionRow": 0
-    },
+
     {
         "x": 2103,
         "y": 2042,
         "color": "",
-        "text": "  Jeans, pants and sweater",
-        "spanishText": "Jeans, pantalones y suéter",
-        "textBackground": "black",
+        "text": "Come on in!",
+        "spanishText": "Adelante!",
+        "textBackground": "",
         "id": "page2 ",
         "xd": 300,
         "yd": 400,
@@ -43,35 +14,5 @@
         "url": "    /pages/tshirt-and-pants",
         "type": "page",
         "directionRow": 0
-    },
-    {
-        "tscale": 0.5,
-        "x": 500,
-        "y": 1424,
-        "color": "",
-        "text": "Supreme collection",
-        "spanishText": "Colección Supreme",
-        "id": "shirt5 ",
-        "xd": 300,
-        "yd": 400,
-        "pointContainer": "shirt3Point",
-        "url": "/collections/supreme",
-        "type": "produt",
-        "directionRow": 0
-    },
-    {
-        "x": 224,
-        "y": 1484,
-        "color": "black",
-        "text": "  Jeans and sweater",
-        "spanishText": "Jeans y suéter",
-        "textBackground": "white",
-        "id": "shirt6 ",
-        "xd": 300,
-        "yd": 400,
-        "pointContainer": "shirt3Point",
-        "url": "/pages/jeans-and-jackets",
-        "type": "page",
-        "directionRow": 90
     }
 ]

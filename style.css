@@ -31,6 +31,10 @@ body {
   scrollbar-color: none;
   z-index: 101;
   overflow: auto;
+
+}
+
+.initial{
   animation: outBlur 3s;
 }
 
